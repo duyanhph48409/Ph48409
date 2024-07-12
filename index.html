@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyen Duy Anh's Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+        }
+
+        .sidebar {
+            width: 33%;
+            background-color: #111111;
+            color: white;
+            text-align: center;
+            padding: 2em 0;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+
+        .main-content {
+            width: 70%;
+            margin-left: 30%;
+            padding: 2em;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .profile-pic {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+
+        .sidebar h1 {
+            margin: 0.5em 0;
+        }
+
+        .sidebar p {
+            margin: 0.5em 0;
+        }
+
+        .main-content h2 {
+            color: #4CAF50;
+            margin-top: 1em;
+        }
+
+        .section {
+            padding: 1em 0;
+            margin-bottom: 1em;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 2em;
+        }
+
+        .skills, .projects, .education, .certifications {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .skills li, .projects li, .education li, .certifications li {
+            flex: 1 1 calc(50% - 1em);
+            margin: 0.5em;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form input, .contact-form textarea {
+            margin: 0.5em 0;
+            padding: 0.5em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .contact-form button {
+            padding: 0.5em;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <img src="https://img.upanh.tv/2024/07/12/duyanh11.jpg" alt="duyanh11.jpg" border="0" class="profile-pic">
+        <h1>Nguyen Duy Anh</h1>
+        <p>Data Processing Developer</p><br/><br/>
+        <p>Email: nhanthanbich@gmail.com</p>
+        <p>Phone: 0964-939-251</p>
+        <p>Location: Ha Dong, Ha Noi</p>
+    </div>
+    <div class="main-content">
+        <section class="section">
+            <h2>Objective</h2>
+            <p><b>Short-term goal:</b> "I aim to kickstart my career in data processing, applying my analytical and data handling skills in practical work scenarios." <br><b>Long-term goal:</b> "My ambition is to evolve into an expert in data processing and artificial intelligence, contributing to the development of intelligent solutions and driving AI adoption in industrial applications."</p>
+        </section>
+
+        <section class="section">
+            <h2>Skills</h2>
+            <ul>
+                <li>Data Management: MySQL</li>
+                <li>Programming Languages: Python, R</li>
+                <li>Data Visualization Tools: Tableau, Power BI</li>
+                <li>AI Frameworks: Scikit-learn, TensorFlow, Keras, PyTorch</li>
+                <li>Image Processing: OpenCV</li>
+                <li>ETL Processes</li>
+                <li>Statistical Knowledge</li>
+                <li>English communication and document research</li>
+                <li>Other: Jira, Github, Trello, Docker</li>
+            </ul>
+        </section>
+
+        <section class="section projects">
+            <h2>Personal Projects</h2>
+            <ul>
+                <li>
+                    <strong>Android Note Application</strong><br>
+                    Description: An application for note storage, including note creation, searching, pinning, adding images and URLs to notes, and customizing note colors.<br>
+                    Utilizing: Room database, RecyclerView, scalable library.<br>
+                    Source: <a href="https://github.com/sss.aaa">https://github.com/sss.aaa</a><br>
+                    Demo: <a href="https://github.com/sss.aaa">https://github.com/sss.aaa</a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="section education">
+            <h2>Education</h2>
+            <ul>
+                <li>
+                    <strong>FPT Polytechnic</strong><br>
+                    Major: Data Processing, 2023 - 2025
+                </li>
+            </ul>
+        </section>
+
+        <section class="section certifications">
+            <h2>Certifications</h2>
+            <ul>
+                <li>
+                    <strong>Google Cloud Fundamentals: Core Infrastructure</strong><br>
+                    November 2022
+                </li>
+                <li>
+                    <strong>TOEIC: Overall Score 750</strong><br>
+                    April 2023
+                </li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Contact Me</h2>
+            <form class="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.querySelector('.contact-form');
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                alert('Your message has been sent!');
+                contactForm.reset();
+            });
+        });
+    </script>
+</body>
+</html>
